@@ -1,6 +1,6 @@
 # todo-list-vuejs
 ## Project 
-I coded a todo-list using Vuex state management. [LIVE](https://epic-jang-75a369.netlify.app/)
+I coded a todo-list using Vuex state management. [LIVE](https://pedantic-kare-2d850b.netlify.app/)
 
 ## Project setup
 ```
