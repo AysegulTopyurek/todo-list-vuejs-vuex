@@ -2,7 +2,7 @@
   <div>
     <div>
       <add-todo @add-todo="addList" />
-      <div style="display: flex; gap: 1em; justify-content: center">
+      <div class="todoBox">
         <div class="lined-paper">
           <div class="top-margin"></div>
           <div class="left-margin">
@@ -26,9 +26,10 @@
                   </div>
 
                   <div class="deleteButton">
-                    <button @click="deleted(todo)"><img src="../assets/Eraser.png" alt="Silgi"></button>
+                    <button @click="deleted(todo)">
+                      <img src="../assets/Eraser.png" alt="Silgi" />
+                    </button>
                   </div>
-                  
                 </div>
               </li>
             </ul>
@@ -64,6 +65,11 @@ export default {
 };
 </script>
 <style scoped>
+.todoBox {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
 .lined-paper {
   position: relative;
   width: 100%;
@@ -101,24 +107,29 @@ export default {
 ul {
   list-style: none;
   padding-left: 0;
-      height: 300px;
-    overflow-y: scroll;
+  height: 300px;
+  overflow-y: scroll;
 }
 .card {
   display: flex;
-   width: 100%;
+  width: 100%;
 }
 .todosList {
   padding-left: 9px;
 }
-.deleteButton{
+.deleteButton {
   margin-left: auto;
 }
-button{
+button {
   border: none;
   background: transparent;
 }
-img{
+img {
   width: 30px;
+}
+@media screen and (max-width: 600px) {
+  .todoBox {
+    display: block;
+  }
 }
 </style>
